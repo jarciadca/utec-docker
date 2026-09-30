@@ -1,0 +1,5 @@
+instruction,build_v1,build_v2,reason
+FROM alpine,CACHED,CACHED,no cambió
+RUN apk add curl wget,CACHED,REBUILT,instrucción odificada
+COPY message.txt,CACHED,INVALIDATED,está después d cambio
+CMD ["cat","/message.txt"],CACHED,REBUILT,está despu� del cambio
